@@ -4,6 +4,7 @@ import android.annotation.TargetApi
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.os.Build
 import android.os.LocaleList
 import java.util.*
@@ -106,8 +107,8 @@ object LanguageUtils {
         Locale.setDefault(locale)
         val localeList = LocaleList(locale)
 
-        val config = context.resources.configuration
-        config.locales = localeList
+        val config: Configuration = context.resources.configuration
+        val localeList1 = localeList
 
         return context.createConfigurationContext(config)
     }
