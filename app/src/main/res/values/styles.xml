@@ -1,0 +1,278 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorSecondary</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="buttonStyle">@style/ButtonStyle</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:background">@drawable/splash_screen</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/hind_vadodara_regular</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:textColorHint">@color/colorTextLight</item>
+    </style>
+
+    <style name="TEXT_SEMI_BOLD" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/hind_vadodara_semi_bold</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:textColorHint">@color/colorTextLight</item>
+    </style>
+
+    <style name="TextViewStyle.Bold" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/hind_vadodara_bold</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:textColorHint">@color/colorTextLight</item>
+    </style>
+
+
+    <style name="ButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="AppTheme.GradientStatusBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+    </style>
+
+    <style name="Authentication">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Authentication.EditTextTitle">
+        <item name="android:layout_marginTop">@dimen/margin_16</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_smaller_body</item>
+    </style>
+
+    <style name="Authentication.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_32</item>
+        <item name="android:layout_marginEnd">@dimen/margin_32</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_large_body</item>
+        <item name="android:paddingBottom">@dimen/padding_16</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Authentication.TextInputLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_32</item>
+        <item name="android:layout_marginEnd">@dimen/margin_32</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:textColorHint">@color/colorTextHint</item>
+    </style>
+
+    <style name="Authentication.TextInputEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/text_large_body</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="android:background">@drawable/border_color_secondary</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:padding">@dimen/padding_16</item>
+    </style>
+
+    <style name="Dashboard" />
+
+    <style name="Dashboard.BottomBarItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_smaller_body</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">@dimen/padding_8</item>
+        <item name="android:paddingEnd">@dimen/padding_8</item>
+    </style>
+
+    <style name="DashboardPageButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_16</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="DashboardPageButton.Left">
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:layout_marginEnd">@dimen/margin_4</item>
+    </style>
+
+    <style name="DashboardPageButton.Right">
+        <item name="android:layout_marginStart">@dimen/margin_4</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="MyAppointments" />
+
+    <style name="MyAppointments.ItemMyAppointment" />
+
+    <style name="MyAppointments.Tab" />
+
+    <style name="MyAppointments.Tab.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_large_body</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="MyAppointments.ItemMyAppointment.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/text_small_body</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:maxLines">@integer/single_line</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MyAppointments.ItemMyAppointment.TextView.Title">
+        <item name="android:paddingTop">@dimen/padding_16</item>
+        <item name="android:paddingStart">@dimen/padding_16</item>
+        <item name="android:paddingEnd">@dimen/padding_16</item>
+    </style>
+
+    <style name="MyAppointments.ItemMyAppointment.TextView.Content">
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/padding_16</item>
+        <item name="android:paddingStart">@dimen/padding_16</item>
+        <item name="android:paddingEnd">@dimen/padding_16</item>
+    </style>
+
+    <style name="Profile" />
+
+    <style name="Profile.Tab" />
+
+    <style name="Profile.Tab.TextView">
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="Profile.Tab.TextView.Title">
+        <item name="android:layout_marginTop">@dimen/margin_16</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">@integer/single_line</item>
+    </style>
+
+    <style name="Profile.Tab.TextView.Input">
+        <item name="android:layout_marginTop">@dimen/margin_8</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/background_editable_field</item>
+        <item name="android:padding">@dimen/padding_16</item>
+        <item name="android:drawablePadding">@dimen/padding_16</item>
+    </style>
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/colorAccent</item>
+    </style>
+
+    <style name="ProgressItem">
+        <item name="android:layout_width">@dimen/width_32</item>
+        <item name="android:layout_height">@dimen/height_32</item>
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:textSize">@dimen/text_large_body</item>
+    </style>
+
+    <style name="ProgressItemLine">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/height_8</item>
+        <item name="android:layout_marginEnd">@dimen/margin_30</item>
+        <item name="android:layout_marginStart">@dimen/margin_30</item>
+    </style>
+
+    <style name="AppButton">
+        <item name="android:layout_width">@dimen/margin_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/padding_16</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation_2</item>
+    </style>
+
+    <style name="AppButton.Common">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_large_body</item>
+        <item name="android:textColor">@color/colorTextRegularSecondary</item>
+        <item name="android:background">@drawable/background_common_button</item>
+    </style>
+
+    <style name="AppButton.Accent">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_large_body</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:background">@drawable/background_accent_button</item>
+    </style>
+
+    <style name="AppIcon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation_2</item>
+    </style>
+
+    <style name="AppIcon.Circular">
+        <item name="android:layout_width">@dimen/width_120</item>
+        <item name="android:layout_height">@dimen/height_120</item>
+        <item name="android:background">@drawable/circle_white</item>
+        <item name="android:padding">@dimen/padding_8</item>
+        <item name="android:src">@drawable/ic_logo_white_with_circular_background</item>
+    </style>
+
+    <style name="AppCalenderViewWeekTextAppearance" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/colorTextLight</item>
+    </style>
+
+    <style name="AppComponent" />
+
+    <style name="AppComponent.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppComponent.TextView.Title">
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/semi_bold</item>
+        <item name="android:textColor">@color/colorTextTitle</item>
+        <item name="android:maxLines">@integer/single_line</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/text_headline</item>
+    </style>
+
+    <style name="AppComponent.TextView.Subtitle">
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:textColor">@color/colorTextRegular</item>
+        <item name="android:textSize">@dimen/text_large_body</item>
+    </style>
+
+</resources>

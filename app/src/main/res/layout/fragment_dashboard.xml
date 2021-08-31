@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_deposit_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/hind_vadodara_semi_bold"
+                android:text="@string/dashboard_txt_deposit_withdraw"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_deposit_withdraw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_deposit_withdraw">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_this_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/hind_vadodara_light"
+                        android:padding="8dp"
+                        android:text="@string/dashboard_txt_this_week"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/chart_deposit_withdraw"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_this_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/hind_vadodara_light"
+                        android:padding="8dp"
+                        android:text="@string/dashboard_txt_this_month"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/chart_deposit_withdraw"
+                        app:layout_constraintStart_toEndOf="@id/tv_this_week"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart_deposit_withdraw"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_this_week" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_deposit_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/hind_vadodara_regular"
+                        android:gravity="center_vertical"
+                        android:padding="6dp"
+                        android:text="@string/txt_deposit"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/view_square_deposit"
+                        app:layout_constraintBottom_toTopOf="@id/chart_deposit_withdraw"
+                        app:layout_constraintEnd_toStartOf="@id/tv_withdraw_indicator"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_withdraw_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/hind_vadodara_regular"
+                        android:gravity="center_vertical"
+                        android:padding="6dp"
+                        android:text="@string/txt_withdraw"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/view_square_withdraw"
+                        app:layout_constraintBottom_toTopOf="@id/chart_deposit_withdraw"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/hind_vadodara_semi_bold"
+                android:text="@string/dashboard_txt_history"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_deposit_withdraw" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_history"
+                app:layout_constraintVertical_bias="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_history_deposit_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/hind_vadodara_regular"
+                        android:gravity="center_vertical"
+                        android:padding="6dp"
+                        android:text="@string/txt_deposit"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/view_square_history_withdraw"
+                        app:layout_constraintBottom_toTopOf="@id/chart_dashboard_history"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_history_withdraw_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/hind_vadodara_regular"
+                        android:gravity="center_vertical"
+                        android:padding="6dp"
+                        android:text="@string/txt_withdraw"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/view_history_squre_deposit"
+                        app:layout_constraintBottom_toTopOf="@id/chart_dashboard_history"
+                        app:layout_constraintStart_toEndOf="@id/tv_history_deposit_indicator"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/chart_dashboard_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_history_deposit_indicator" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

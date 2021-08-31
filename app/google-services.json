@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "222373235363",
+    "project_id": "cryptofuelx-wallet-2513",
+    "storage_bucket": "cryptofuelx-wallet-2513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222373235363:android:7c30427abb039230cd8d16",
+        "android_client_info": {
+          "package_name": "com.wallet.cryptofuelx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222373235363-bklj05545pa74tm87mgj3jgqnljqgbph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxMdilJz02WJ-kkYo7RlyYy3uRQNME1WM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222373235363-bklj05545pa74tm87mgj3jgqnljqgbph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

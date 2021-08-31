@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_navigation_drawer_gradient">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_drawer_closer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_64"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:src="@drawable/ic_back"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorYellow" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/image_view_user"
+            android:layout_width="@dimen/width_80"
+            android:layout_height="@dimen/height_80"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/man_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_view_drawer_closer" />
+
+        <TextView
+            android:id="@+id/text_view_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/hind_vadodara_medium"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/image_view_user"
+            app:layout_constraintStart_toStartOf="@id/image_view_user"
+            app:layout_constraintTop_toBottomOf="@id/image_view_user"
+            tools:text="John Doe" />
+
+        <TextView
+            android:id="@+id/tv_wallet_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/hind_vadodara_medium"
+            android:text="Wallet Preference"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_user_name" />
+
+        <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+            android:id="@+id/dotted_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_wallet_pre" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_menu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dotted_line" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

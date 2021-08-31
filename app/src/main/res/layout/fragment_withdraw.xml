@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_80"
+        android:background="@drawable/gradient_color_purple"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_user_balance"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_150"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardElevation="@dimen/elevation_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_available_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hind_vadodara_medium"
+                android:text="@string/available_balance"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_btc_balance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_btc_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/hind_vadodara_semi_bold"
+                android:singleLine="true"
+                android:text="45.007BTC"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_secondary_balance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_available_balance"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_secondary_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/hind_vadodara_semi_bold"
+                android:singleLine="true"
+                android:text="$645.656"
+                android:textColor="@color/color_secondary_currency"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_btc_balance" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/card_view_user_balance"
+        app:layout_constraintTop_toBottomOf="@id/card_view_user_balance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/hind_vadodara_semi_bold"
+                android:text="To"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/et_wallet_address"
+                style="@style/Authentication.TextInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingEnd="52dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/bitcoin_address"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_to" />
+
+            <ImageView
+                android:id="@+id/btn_scan"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_scan"
+                app:layout_constraintBottom_toBottomOf="@id/et_wallet_address"
+                app:layout_constraintEnd_toEndOf="@id/et_wallet_address"
+                app:layout_constraintTop_toTopOf="@id/et_wallet_address" />
+
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/hind_vadodara_semi_bold"
+                android:text="@string/amount"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/et_wallet_address"
+                app:layout_constraintTop_toBottomOf="@id/et_wallet_address" />
+
+
+            <EditText
+                android:id="@+id/et_amount"
+                style="@style/Authentication.TextInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/amount"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_amount" />
+
+
+            <TextView
+                android:id="@+id/tv_send_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_send_all_text"
+                android:fontFamily="@font/hind_vadodara_light"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text="Send All"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/et_amount"
+                app:layout_constraintEnd_toEndOf="@id/et_amount"
+                app:layout_constraintTop_toTopOf="@id/et_amount" />
+
+
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/hind_vadodara_semi_bold"
+                android:text="Note"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/et_amount"
+                app:layout_constraintTop_toBottomOf="@id/et_amount" />
+
+            <EditText
+                android:id="@+id/et_note"
+                style="@style/Authentication.TextInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_100"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:hint="@string/type_here_optional"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_note" />
+
+
+            <TextView
+                android:id="@+id/btn_send"
+                style="@style/AppButton.Common"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:foreground="?selectableItemBackground"
+                android:text="@string/send"
+                app:layout_constraintEnd_toEndOf="@id/et_amount"
+                app:layout_constraintStart_toStartOf="@id/et_amount"
+                app:layout_constraintTop_toBottomOf="@id/et_amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+            android:id="@+id/view_dotted_line_top"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_wallet_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/hind_vadodara_regular"
+            android:singleLine="true"
+            android:text="BTC Wallet 1"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_wallet_balance"
+            app:layout_constraintEnd_toStartOf="@+id/btn_deposit"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_dotted_line_top"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_wallet_balance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:singleLine="true"
+            android:text="34.05652BTC"
+            android:textColor="@color/color_balance_regular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_deposit"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/tv_wallet_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_wallet_name" />
+
+        <!--deposit section-->
+
+        <ImageView
+            android:id="@+id/btn_activity"
+            android:layout_width="@dimen/width_40"
+            android:layout_height="@dimen/height_40"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_activity"
+            app:layout_constraintBottom_toTopOf="@id/tv_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_wallet_name"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hind_vadodara_light"
+            android:text="Activity"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wallet_balance"
+            app:layout_constraintEnd_toEndOf="@id/btn_activity"
+            app:layout_constraintStart_toStartOf="@+id/btn_activity"
+            app:layout_constraintTop_toBottomOf="@id/btn_activity" />
+
+        <!--withdraw section-->
+        <ImageView
+            android:id="@+id/btn_withdraw"
+            android:layout_width="@dimen/width_40"
+            android:layout_height="@dimen/height_40"
+            android:layout_marginEnd="36dp"
+            android:background="@android:color/transparent"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_withdraw"
+            app:layout_constraintBottom_toTopOf="@id/tv_activity"
+            app:layout_constraintEnd_toStartOf="@id/btn_activity"
+            app:layout_constraintTop_toTopOf="@+id/tv_wallet_name"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_withdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hind_vadodara_light"
+            android:text="Withdraw"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wallet_balance"
+            app:layout_constraintEnd_toEndOf="@id/btn_withdraw"
+            app:layout_constraintStart_toStartOf="@+id/btn_withdraw"
+            app:layout_constraintTop_toBottomOf="@id/btn_withdraw" />
+
+        <!--deposit section-->
+        <ImageView
+            android:id="@+id/btn_deposit"
+            android:layout_width="@dimen/width_40"
+            android:layout_height="@dimen/height_40"
+            android:layout_marginEnd="36dp"
+            android:background="@android:color/transparent"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_deposit"
+            app:layout_constraintBottom_toTopOf="@id/tv_activity"
+            app:layout_constraintEnd_toStartOf="@id/btn_withdraw"
+            app:layout_constraintTop_toTopOf="@+id/tv_wallet_name"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hind_vadodara_light"
+            android:text="Deposit"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wallet_balance"
+            app:layout_constraintEnd_toEndOf="@id/btn_deposit"
+            app:layout_constraintStart_toStartOf="@+id/btn_deposit"
+            app:layout_constraintTop_toBottomOf="@id/btn_deposit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+            android:id="@+id/view_dotted_line_top"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ic_icon_all_activity"
+            android:layout_width="@dimen/width_40"
+            android:layout_height="@dimen/height_40"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_deposit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_wallet_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/hind_vadodara_regular"
+            android:singleLine="true"
+            android:text="BTC Wallet 1"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_wallet_message"
+            app:layout_constraintEnd_toStartOf="@+id/tv_transaction_amount"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/ic_icon_all_activity"
+            app:layout_constraintTop_toTopOf="@id/ic_icon_all_activity"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_wallet_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:singleLine="true"
+            android:text="Received from Robin's Wallet"
+            android:textColor="@color/colorTextRegular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_icon_all_activity"
+            app:layout_constraintEnd_toStartOf="@+id/tv_transaction_amount"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/tv_wallet_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_wallet_name" />
+
+
+        <TextView
+            android:id="@+id/tv_transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:singleLine="true"
+            android:text="56.25625 BTC"
+            android:textColor="@color/color_balance_regular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_wallet_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_wallet_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+

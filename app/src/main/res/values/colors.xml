@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>867EFF
+    <color name="colorPrimary">#867EFF</color>
+    <color name="colorPrimaryDark">#6258FB</color>
+    <color name="colorAccent">#867EFF</color>
+    <color name="colorSecondary">#E9E9E9</color>
+
+    <!--Extra colors-->
+    <color name="colorTextRegular">#666666</color>
+    <color name="colorTextRegularSecondary">#FFFFFF</color>
+    <color name="colorTextHint">#A4A4A4</color>
+    <color name="colorTextLight">#7E7777</color>
+    <color name="colorTextTitle">#343434</color>
+    <color name="colorTextSubtitle">#444444</color>
+    <color name="colorTextDisabled">#6C6767</color>
+    <color name="colorPasswordToggle">#C4C4C4</color>
+    <color name="textDim">#919191</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="colorYellow">#FFCB05</color>
+    <color name="fifty_percent_black">#80000000</color>
+    <color name="shadow">#d0d8dc</color>
+    <color name="light_shadow">#F9F9F9</color>
+    <color name="transparent">#00000000</color>
+    <color name="negativeRed">#FF333E</color>
+    <color name="inputFormBackground">#F4F4F4</color>
+    <color name="darkBackground">#494A53</color>
+    <color name="disabledGray">#BCBCBC</color>
+    <color name="buttonBorder">#D9D9D9</color>
+    <color name="buttonRed">#FF333F</color>
+    <color name="dottedLine">#C8C9CB</color>
+
+    <color name="mainBackground">#E2F1FC</color>
+    <color name="colorBottomBarBackground">#171616</color>
+    <color name="colorBottomBarItemEnabled">#6258FB</color>
+    <color name="colorBottomBarItemDisabled">#3F3B3B</color>
+    <color name="disabled">#E4E8F3</color>
+    <color name="colorPurpleGradientStart">#6258FB</color>
+    <color name="colorPurpleGradientEnd">#867EFF</color>
+
+    <!--Ripple-->
+    <color name="colorWhite50">#80FFFFFF</color>
+    <color name="colorPrimary50">#80867EFF</color>
+
+    <!--chart color-->
+
+    <color name="deposit_color">#F38232</color>
+    <color name="withdraw_color">#C143FE</color>
+    <color name="color_history_deposit">#DFF3FE</color>
+    <color name="color_history_withdraw">#5E55E6</color>
+    <color name="color_secondary_currency">#FF9E2B</color>
+    <color name="color_balance_regular">#4EB200</color>
+
+</resources>

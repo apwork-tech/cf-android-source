@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.wallet.cryptofuelx.main.ui.base.widget.CustomStatusBarView
+        android:id="@+id/status_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/image_view_profile_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/image_view_profile_top"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_top_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/width_32"
+        android:layout_height="@dimen/height_32"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="32dp"
+        android:padding="@dimen/padding_4"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_profile_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar"
+        app:layout_constraintVertical_bias="0"
+        app:tint="@color/colorWhite"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/semi_bold"
+        android:gravity="center"
+        android:maxLines="@integer/single_line"
+        android:text="Profile"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintEnd_toStartOf="@id/image_view_edit"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_view_edit"
+        android:layout_width="@dimen/width_32"
+        android:layout_height="@dimen/height_32"
+        android:layout_marginTop="@dimen/height_32"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:padding="@dimen/padding_3"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_profile_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar"
+        app:layout_constraintVertical_bias="0"
+        tools:ignore="ContentDescription" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/image_view_user"
+        android:layout_width="@dimen/width_85"
+        android:layout_height="@dimen/height_85"
+        android:src="@drawable/man_avatar"
+        app:civ_border_width="@dimen/margin_0"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_profile_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_pick_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_add_image"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_user"
+        app:layout_constraintEnd_toEndOf="@id/image_view_user"
+        app:layout_constraintTop_toTopOf="@id/image_view_user"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_profile_top">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Profile View-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_profile_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <!--first name-->
+                <TextView
+                    android:id="@+id/tv_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="First Name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_first_name_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/hind_vadodara_semi_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_first_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_first_name"
+                    tools:text="John" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_first_name"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_first_name_value" />
+
+                <!--last name-->
+                <TextView
+                    android:id="@+id/tv_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Last Name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_first_name" />
+
+                <TextView
+                    android:id="@+id/tv_last_name_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/hind_vadodara_semi_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_last_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_last_name"
+                    tools:text="Doe" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_last_name"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_last_name_value" />
+                <!--Email-->
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_last_name" />
+
+                <TextView
+                    android:id="@+id/tv_email_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/hind_vadodara_semi_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_email"
+                    app:layout_constraintTop_toBottomOf="@id/tv_email"
+                    tools:text="jony35@gmail.com" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_email"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_email_value" />
+
+                <!--Phone-->
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_email" />
+
+                <TextView
+                    android:id="@+id/tv_phone_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/hind_vadodara_semi_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_phone"
+                    app:layout_constraintTop_toBottomOf="@id/tv_phone"
+                    tools:text="+687 125 368 5952" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_phone_value" />
+
+                <!--country-->
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Country"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_phone" />
+
+                <TextView
+                    android:id="@+id/tv_country_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/hind_vadodara_semi_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_country"
+                    app:layout_constraintTop_toBottomOf="@id/tv_country"
+                    tools:text="United State" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_country_value" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Profile Edit-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_profile_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <!--first name-->
+                <TextView
+                    android:id="@+id/tv_first_name_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="First Name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_first_name_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@null"
+                    android:tag="First Name"
+                    android:fontFamily="@font/hind_vadodara_light"
+                    android:hint="Type here.."
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_first_name_edit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_first_name_edit" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_first_name_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_first_name_value" />
+
+                <!--last name-->
+                <TextView
+                    android:id="@+id/tv_last_name_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Last Name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_first_name_edit" />
+
+                <EditText
+                    android:id="@+id/et_last_name_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/hind_vadodara_light"
+                    android:hint="Type here..."
+                    android:tag="Last Name"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_last_name_edit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_last_name_edit" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_last_name_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_last_name_value" />
+                <!--Email-->
+                <TextView
+                    android:id="@+id/tv_email_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_last_name_edit" />
+
+                <EditText
+                    android:id="@+id/et_last_email_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/hind_vadodara_light"
+                    android:hint="Type here..."
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_email_edit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_email_edit" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_email_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_last_email_value" />
+
+                <!--Phone-->
+                <TextView
+                    android:id="@+id/tv_phone_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_email_edit" />
+
+                <EditText
+                    android:id="@+id/et_last_phone_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/hind_vadodara_light"
+                    android:hint="Type here..."
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:tag="Phone"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_phone_edit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_phone_edit" />
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_phone_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_last_phone_value" />
+
+                <!--country-->
+                <TextView
+                    android:id="@+id/tv_country_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Country"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dotted_line_phone_edit" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/et_last_country_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:ccp_showFullName="true"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="false"
+                    app:ccp_textGravity="LEFT"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_country_edit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_country_edit" />
+
+
+                <com.wallet.cryptofuelx.main.ui.base.widget.DottedLineView
+                    android:id="@+id/dotted_line_country_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_last_country_value" />
+
+                <!--save changes-->
+                <TextView
+                    android:id="@+id/btn_save_changes"
+                    style="@style/AppButton.Common"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Save Changes"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dotted_line_country_edit"
+                    app:layout_constraintVertical_bias="0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

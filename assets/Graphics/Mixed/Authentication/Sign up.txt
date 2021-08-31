@@ -1,0 +1,8 @@
+Border: size 1,Color :E9E9E9
+
+Field Text:
+Text name : Hind Vadodara ( Medium), size 15
+Hint color : A4A4A4
+Main color : 666666
+
+Already have.....: Hind Vadodara ( Regular), size 15 ,, Hind Vadodara (Medium), size 15

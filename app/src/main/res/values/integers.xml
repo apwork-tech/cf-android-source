@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="debounce_time_out">1000</integer>
+    <integer name="device_type">2</integer>
+    <integer name="character_min_limit_password">6</integer>
+    <integer name="character_max_limit_password">12</integer>
+    <integer name="character_max_limit_user_name">50</integer>
+    <integer name="character_max_limit_drawer_user_name">30</integer>
+    <integer name="session_morning">1</integer>
+    <integer name="session_afternoon">2</integer>
+    <integer name="session_anytime">3</integer>
+    <integer name="default_time_limit_in_months">3</integer>
+    <integer name="single_line">1</integer>
+    <integer name="initial_position">0</integer>
+    <integer name="i_dont_know_id">1</integer>
+    <integer name="unauthenticated_code">401</integer>
+</resources>
