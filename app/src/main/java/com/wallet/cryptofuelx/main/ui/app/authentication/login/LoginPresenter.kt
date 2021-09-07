@@ -3,7 +3,7 @@ package com.wallet.cryptofuelx.main.ui.app.authentication.login
 import android.content.Context
 import android.text.TextUtils
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.iid.FirebaseInstanceId
+
 import com.wallet.cryptofuelx.R
 import com.wallet.cryptofuelx.main.data.BaseRepository
 import com.wallet.cryptofuelx.main.ui.app.authentication.verification.CodeVerificationActivity
@@ -16,20 +16,17 @@ import com.wallet.cryptofuelx.utils.helper.network.NoConnectivityException
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
+import java.util.Calendar.getInstance
 
 class LoginPresenter : BasePresenter<LoginMvpView>() {
     private var mToken: String? = null
 
     fun login(context: Context, email: String, password: String) {
         ProgressDialogUtils.on().showProgressDialog(context)
-        FirebaseInstanceId.getInstance().instanceId
-                .addOnCompleteListener(OnCompleteListener { task ->
-                    if (!task.isSuccessful) {
-                        mvpView?.onError(DataUtils.getString(R.string.login_error_login_failed))
-                        return@OnCompleteListener
-                    }
+
+
                     // Get new Instance ID token
-                    mToken = task.result?.token
+
                     compositeDisposable.add(
                             BaseRepository.on().login(email, password)
                                     .observeOn(AndroidSchedulers.mainThread())
@@ -98,6 +95,6 @@ class LoginPresenter : BasePresenter<LoginMvpView>() {
                                             mvpView?.onError(DataUtils.getString(R.string.login_error_login_failed))
                                         }
                                     }))
-                })
+
     }
 }

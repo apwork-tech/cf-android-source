@@ -3,7 +3,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 // For crashlytics
-apply plugin: 'io.fabric'
+// apply plugin: 'io.fabric'
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
 
 // Add kapt plugin for compiling data binding in kotlin
 apply plugin: 'kotlin-kapt'
@@ -24,8 +26,8 @@ android {
         multiDexEnabled true
 
         // Version code and name should be changed for every release
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.12"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -65,14 +67,22 @@ android {
 }
 
 dependencies {
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:28.4.0')
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Core with kotlin extension
-    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.core:core-ktx:1.6.0'
 
     // Core library
-    implementation 'androidx.core:core:1.0.2'
+    implementation 'androidx.core:core:1.6.0'
 
     // Add .jar libraries from external folder
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -184,7 +194,7 @@ dependencies {
     // Firebase
     implementation 'com.google.firebase:firebase-core:17.0.1'
     implementation 'com.google.firebase:firebase-messaging:19.0.1'
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    // implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
     // Osmdroid for offline map
     implementation "org.osmdroid:osmdroid-android:$rootProject.ext.osmdroid_version"
@@ -226,7 +236,7 @@ dependencies {
 
     //validator easy-checker(writer-Mujahid)
     implementation 'com.github.mkhan9047:Easy-Checker:1.0.2'
-    implementation "com.squareup.okhttp3:logging-interceptor:4.4.0"
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
 }
 
 apply plugin: 'com.google.gms.google-services'
